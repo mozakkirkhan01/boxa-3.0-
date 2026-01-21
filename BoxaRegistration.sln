@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36631.11
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxaRegistration", "BoxaRegistration\BoxaRegistration.csproj", "{7CE5E8BB-8D1B-4AE4-AC3B-866DA2837C16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxa", "Boxa\Boxa.csproj", "{60FB5CA6-1EB5-4513-AC1F-28FEF7FC12C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CE5E8BB-8D1B-4AE4-AC3B-866DA2837C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE5E8BB-8D1B-4AE4-AC3B-866DA2837C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE5E8BB-8D1B-4AE4-AC3B-866DA2837C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE5E8BB-8D1B-4AE4-AC3B-866DA2837C16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60FB5CA6-1EB5-4513-AC1F-28FEF7FC12C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FB5CA6-1EB5-4513-AC1F-28FEF7FC12C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FB5CA6-1EB5-4513-AC1F-28FEF7FC12C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FB5CA6-1EB5-4513-AC1F-28FEF7FC12C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B41DC0E2-1349-4144-AF57-B1971BAF9915}
+	EndGlobalSection
+EndGlobal

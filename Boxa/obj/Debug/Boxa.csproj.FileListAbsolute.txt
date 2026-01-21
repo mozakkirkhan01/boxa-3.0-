@@ -1,0 +1,4 @@
+E:\Krishna File\Project\BoxaRegistration\Boxa\obj\Debug\Boxa.csprojAssemblyReference.cache
+E:\Krishna File\Project\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CoreCompileInputs.cache
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.AssemblyReference.cache
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CoreCompileInputs.cache

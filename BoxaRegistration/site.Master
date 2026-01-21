@@ -1,0 +1,230 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="BoxaRegistration.site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Boxa Alumni Website" />
+    <title>BOXA- Bokaro Old Xaverians </title>
+    <link rel="shortcut icon" href="/images/boxa-logo.png" type="image/x-icon" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/css/flaticon-set.css" rel="stylesheet" />
+    <link href="/css/elegant-icons.css" rel="stylesheet" />
+    <link href="/css/magnific-popup.css" rel="stylesheet" />
+    <link href="/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/css/animate.css" rel="stylesheet" />
+    <link href="/css/bootsnav.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/responsive.css" rel="stylesheet" />
+    <link href="/css/toastr.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet" />
+    <style>
+        .top-bar-area .social-box {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex !important;
+            flex-direction: row;
+            gap: 15px;
+            align-items: center;
+        }
+
+            .top-bar-area .social-box li {
+                display: inline-block !important;
+            }
+
+                .top-bar-area .social-box li a {
+                    color: #fff;
+                    font-size: 16px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.3s;
+                }
+
+                    .top-bar-area .social-box li a:hover {
+                        color: #ffd700;
+                    }
+
+        @media (max-width: 767px) {
+
+            .top-bar-area .social-box {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 18px; /* space between icons */
+                padding: 0px 0;
+                list-style: none;
+            }
+
+                .top-bar-area .social-box li {
+                    display: inline-block !important;
+                    margin: 0 !important;
+                }
+
+                    .top-bar-area .social-box li a i {
+                        font-size: 18px;
+                        color: #fff; /* adjust if needed */
+                    }
+
+            /* Optional: Center the login text also */
+            .top-bar-area .user-login {
+                text-align: center !important;
+                margin-top: 10px;
+            }
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="top-bar-area address-one-lines bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 address-info">
+                        <div class="info box">
+                            <ul class="social-box">
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/officialboxa/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="user-login text-right col-lg-2">
+                        <a href="#"><i class="fas fa-edit"></i>Sign-In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <header>
+            <!-- Start Navigation -->
+            <nav class="navbar mobile-sidenav inc-shape navbar-sticky navbar-default validnavs dark">
+
+                <div class="container d-flex justify-content-between align-items-center">
+
+
+                    <div class="navbar-brand-left">
+                        <!-- Start Header Navigation -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <a class="navbar-brand" href="/home">
+                                <img src="/images/boxa-logo-new1.png" class="logo" alt="Logo">
+                            </a>
+                        </div>
+                        <!-- End Header Navigation -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+
+                        <%-- <img src="assets/img/logo.png" alt="Logo">--%>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-times"></i>
+                        </button>
+
+                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li >
+                                <a href="/home" class=" active smooth-menu" >Home</a>
+                            </li>
+                            <li>
+                                <a class="smooth-menu" href="#">Download e-Receipt</a>
+                            </li>
+
+                            <li>
+                                <a class="smooth-menu" href="#">contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                    <!-- Main Nav -->
+                </div>
+                <!-- Overlay screen for menu -->
+                <div class="overlay-screen"></div>
+                <!-- End Overlay screen for menu -->
+
+            </nav>
+            <!-- End Navigation -->
+        </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+         <footer class="bg-light">
+            <!-- Start Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <p>&copy; Copyright 2025. All Rights Reserved by <a href="https://officialboxa.in/" target="_blank">BOXA.</a> Design & Developed By <a href="https://webaikon.com/" target="_blank">Webaikon Infotech</a> </p>
+                        </div>
+                        <div class="col-lg-5 text-end link">
+                            <%--<asp:Repeater ID="rptContactus" runat="server">
+                                    <ItemTemplate>
+                                        <ul>
+                                            <li>
+                                                <a href="mailto:<%#Eval("Email") %>"><i class="fas fa-inbox"></i>&nbsp <%#Eval("Email") %></a>
+                                            </li>
+                                            <li>
+                                                <a href="tele:0<%#Eval("PhoneNo") %>"><i class="fas fa-phone"></i>&nbsp +91 <%#Eval("PhoneNo") %></a>
+                                            </li>
+
+                                        </ul>
+                                    </ItemTemplate>
+                                </asp:Repeater>--%>
+                            <ul>
+                                <li>
+                                    <a href="/terms-conditions">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="/privacy-policy">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="/refund-policy">Refund Policy</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <script src="/js/jquery-1.12.4.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/equal-height.min.js"></script>
+        <script src="/js/jquery.appear.js"></script>
+        <script src="/js/jquery.easing.min.js"></script>
+        <script src="/js/jquery.magnific-popup.min.js"></script>
+        <script src="/js/modernizr.custom.13711.js"></script>
+        <script src="/js/owl.carousel.min.js"></script>
+        <script src="/js/wow.min.js"></script>
+        <script src="/js/isotope.pkgd.min.js"></script>
+        <script src="/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/js/count-to.js"></script>
+        <script src="/js/loopcounter.js"></script>
+        <script src="/js/jquery.nice-select.min.js"></script>
+        <script src="/js/bootsnav.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/toastr.js"></script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.dll.config
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.pdb
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\csc.exe
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\csc.exe.config
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\csc.rsp
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\csi.exe
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\csi.exe.config
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\csi.rsp
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.AppContext.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Collections.Immutable.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Console.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.IO.Compression.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.IO.FileSystem.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.IO.Pipes.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Reflection.Metadata.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Security.AccessControl.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Security.Claims.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.ValueTuple.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Xml.XPath.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\vbc.exe
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\vbc.exe.config
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\vbc.rsp
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\VBCSCompiler.exe
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\roslyn\VBCSCompiler.exe.config
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\BouncyCastle.Cryptography.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\BouncyCastle.Cryptography.xml
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csprojAssemblyReference.cache
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.CoreCompileInputs.cache
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.CopyComplete
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.dll
+E:\Krishna File\Project\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.pdb
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.dll.config
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.pdb
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.AssemblyReference.cache
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.CoreCompileInputs.cache
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.pdb

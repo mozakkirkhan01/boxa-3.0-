@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BoxaRegistration" Class="BoxaDiamondRegDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=FAIZ-AOF\SQLEXPRESS;Initial Catalog=BoxaRegistration;Persist Security Info=True;User ID=sa" SettingsObjectName="Boxa.Properties.Settings" SettingsPropertyName="BoxaRegistrationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MemberDetail" Member="MemberDetails">
+    <Type Name="MemberDetail">
+      <Column Name="MemberDetailId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberRegId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RelationType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="DateofBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="MemberReg_MemberDetail" Member="MemberReg" ThisKey="MemberRegId" OtherKey="MemberRegId" Type="MemberReg" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemberReg" Member="MemberRegs">
+    <Type Name="MemberReg">
+      <Column Name="MemberRegId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberRegNo" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberFullName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileNo" Type="System.String" DbType="NVarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="YearofPassing" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentProfession" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="OrganizationName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="TshirtSize" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="TotalAmountPaid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="MemberReg_MemberDetail" Member="MemberDetails" ThisKey="MemberRegId" OtherKey="MemberRegId" Type="MemberDetail" />
+    </Type>
+  </Table>
+</Database>

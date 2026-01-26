@@ -1,12 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BoxaRegistration" Class="BoxaDiamondRegDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=FAIZ-AOF\SQLEXPRESS;Initial Catalog=BoxaRegistration;Persist Security Info=True;User ID=sa" SettingsObjectName="Boxa.Properties.Settings" SettingsPropertyName="BoxaRegistrationConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=BoxaRegistration;Persist Security Info=True;User ID=sa" SettingsObjectName="Boxa.Properties.Settings" SettingsPropertyName="BoxaRegistrationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PassingYear" Member="PassingYears">
+    <Type Name="PassingYear">
+      <Column Name="PassingYearId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PassingYearName" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TshirtSize" Member="TshirtSizes">
+    <Type Name="TshirtSize">
+      <Column Name="TshirtSizeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TshirtSizeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Transaction]" Member="Transactions">
+    <Type Name="Transaction">
+      <Column Name="TransactionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberRegId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="payerName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="payerEmail" Type="System.String" DbType="NVarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="payerMobile" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="clientTxnId" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="payerAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="clientCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="paidAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="paymentMode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="bankName" Type="System.String" DbType="NVarChar(355) NOT NULL" CanBeNull="false" />
+      <Column Name="amounttype" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="statusCode" Type="System.Int64" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="challanNumber" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sabpaisaTxnld" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="sabpaisaMessage" Type="System.String" DbType="NVarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="bankMessage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="bankErrorCode" Type="System.String" DbType="NVarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="sabpaisaErrorCode" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="bankTxnld" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="programId" Type="System.String" DbType="NVarChar(355)" CanBeNull="true" />
+      <Column Name="mcc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="transDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="rrn" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="MemberReg_Transaction" Member="MemberReg" ThisKey="MemberRegId" OtherKey="MemberRegId" Type="MemberReg" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.MemberDetail" Member="MemberDetails">
     <Type Name="MemberDetail">
       <Column Name="MemberDetailId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MemberRegId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="RelationType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
-      <Column Name="DateofBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Association Name="MemberReg_MemberDetail" Member="MemberReg" ThisKey="MemberRegId" OtherKey="MemberRegId" Type="MemberReg" IsForeignKey="true" />
     </Type>
@@ -17,7 +61,7 @@
       <Column Name="MemberRegNo" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="MemberFullName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
       <Column Name="MobileNo" Type="System.String" DbType="NVarChar(13) NOT NULL" CanBeNull="false" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(350) NOT NULL" CanBeNull="false" />
       <Column Name="Gender" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
       <Column Name="YearofPassing" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="City" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
@@ -26,7 +70,12 @@
       <Column Name="CurrentProfession" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="OrganizationName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
       <Column Name="TshirtSize" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
-      <Column Name="TotalAmountPaid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="TotalAmountPaid" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Photo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentStatus" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ClientTxnId" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="MemberReg_Transaction" Member="Transactions" ThisKey="MemberRegId" OtherKey="MemberRegId" Type="Transaction" />
       <Association Name="MemberReg_MemberDetail" Member="MemberDetails" ThisKey="MemberRegId" OtherKey="MemberRegId" Type="MemberDetail" />
     </Type>
   </Table>

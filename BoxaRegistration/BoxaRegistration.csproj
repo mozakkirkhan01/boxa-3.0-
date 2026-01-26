@@ -44,7 +44,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,6 +68,7 @@
     <Content Include="css\animate.css" />
     <Content Include="css\bootsnav.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\default.css" />
     <Content Include="css\elegant-icons.css" />
     <Content Include="css\ElegantIcons.html" />
     <Content Include="css\flaticon-set.css" />
@@ -95,6 +100,9 @@
     <Content Include="images\boxa-logo-new1.png" />
     <Content Include="images\boxa-logo-right.png" />
     <Content Include="images\boxa-logo.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\noimage.png" />
+    <Content Include="images\success.png" />
     <Content Include="js\bootsnav.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\count-to.js" />
@@ -112,6 +120,7 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\toastr.js" />
     <Content Include="js\wow.min.js" />
+    <Content Include="payment-response.aspx" />
     <Content Include="privacy-policy.aspx" />
     <Content Include="proceed-to-pay.aspx" />
     <Content Include="refund-policy.aspx" />
@@ -119,6 +128,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CookieVariable.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +138,15 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Images.cs" />
+    <Compile Include="LoadData.cs" />
+    <Compile Include="payment-response.aspx.cs">
+      <DependentUpon>payment-response.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment-response.aspx.designer.cs">
+      <DependentUpon>payment-response.aspx</DependentUpon>
     </Compile>
     <Compile Include="privacy-policy.aspx.cs">
       <DependentUpon>privacy-policy.aspx</DependentUpon>
@@ -151,6 +170,7 @@
     <Compile Include="refund-policy.aspx.designer.cs">
       <DependentUpon>refund-policy.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SessionVariable.cs" />
     <Compile Include="site.Master.cs">
       <DependentUpon>site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,12 +209,19 @@
     <Content Include="fonts\Flaticon.ttf" />
     <Content Include="fonts\Flaticon.woff" />
     <Content Include="site.Master" />
+    <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Boxa\Boxa.csproj">
+      <Project>{42b93608-ac34-4a7d-a7e7-6559bb3978d4}</Project>
+      <Name>Boxa</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

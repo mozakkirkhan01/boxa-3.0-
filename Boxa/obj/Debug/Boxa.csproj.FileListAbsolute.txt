@@ -1,4 +1,27 @@
-E:\Krishna File\Project\BoxaRegistration\Boxa\obj\Debug\Boxa.csprojAssemblyReference.cache
-E:\Krishna File\Project\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CoreCompileInputs.cache
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\bin\Debug\Boxa.dll.config
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\bin\Debug\Boxa.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\bin\Debug\Boxa.pdb
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\bin\Debug\BouncyCastle.Crypto.dll
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.AssemblyReference.cache
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CoreCompileInputs.cache
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CopyComplete
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\obj\Debug\Boxa.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration\Boxa\obj\Debug\Boxa.pdb
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\bin\Debug\Boxa.dll.config
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\bin\Debug\Boxa.dll
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\bin\Debug\Boxa.pdb
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\bin\Debug\BouncyCastle.Crypto.dll
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\bin\Debug\System.Net.Http.dll
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\bin\Debug\System.Net.Http.xml
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CoreCompileInputs.cache
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CopyComplete
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\obj\Debug\Boxa.dll
+E:\Krishna File\Project 2026\BoxaRegistration\Boxa\obj\Debug\Boxa.pdb
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\Boxa\bin\Debug\Boxa.dll.config
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\Boxa\bin\Debug\Boxa.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\Boxa\bin\Debug\Boxa.pdb
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\Boxa\bin\Debug\BouncyCastle.Crypto.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CoreCompileInputs.cache
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\Boxa\obj\Debug\Boxa.csproj.CopyComplete
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\Boxa\obj\Debug\Boxa.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\Boxa\obj\Debug\Boxa.pdb

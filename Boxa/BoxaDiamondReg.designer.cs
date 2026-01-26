@@ -30,6 +30,15 @@ namespace Boxa
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertPassingYear(PassingYear instance);
+    partial void UpdatePassingYear(PassingYear instance);
+    partial void DeletePassingYear(PassingYear instance);
+    partial void InsertTshirtSize(TshirtSize instance);
+    partial void UpdateTshirtSize(TshirtSize instance);
+    partial void DeleteTshirtSize(TshirtSize instance);
+    partial void InsertTransaction(Transaction instance);
+    partial void UpdateTransaction(Transaction instance);
+    partial void DeleteTransaction(Transaction instance);
     partial void InsertMemberDetail(MemberDetail instance);
     partial void UpdateMemberDetail(MemberDetail instance);
     partial void DeleteMemberDetail(MemberDetail instance);
@@ -68,6 +77,30 @@ namespace Boxa
 			OnCreated();
 		}
 		
+		public System.Data.Linq.Table<PassingYear> PassingYears
+		{
+			get
+			{
+				return this.GetTable<PassingYear>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TshirtSize> TshirtSizes
+		{
+			get
+			{
+				return this.GetTable<TshirtSize>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Transaction> Transactions
+		{
+			get
+			{
+				return this.GetTable<Transaction>();
+			}
+		}
+		
 		public System.Data.Linq.Table<MemberDetail> MemberDetails
 		{
 			get
@@ -81,6 +114,929 @@ namespace Boxa
 			get
 			{
 				return this.GetTable<MemberReg>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PassingYear")]
+	public partial class PassingYear : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _PassingYearId;
+		
+		private int _PassingYearName;
+		
+		private byte _Status;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPassingYearIdChanging(int value);
+    partial void OnPassingYearIdChanged();
+    partial void OnPassingYearNameChanging(int value);
+    partial void OnPassingYearNameChanged();
+    partial void OnStatusChanging(byte value);
+    partial void OnStatusChanged();
+    #endregion
+		
+		public PassingYear()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PassingYearId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int PassingYearId
+		{
+			get
+			{
+				return this._PassingYearId;
+			}
+			set
+			{
+				if ((this._PassingYearId != value))
+				{
+					this.OnPassingYearIdChanging(value);
+					this.SendPropertyChanging();
+					this._PassingYearId = value;
+					this.SendPropertyChanged("PassingYearId");
+					this.OnPassingYearIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PassingYearName", DbType="Int NOT NULL")]
+		public int PassingYearName
+		{
+			get
+			{
+				return this._PassingYearName;
+			}
+			set
+			{
+				if ((this._PassingYearName != value))
+				{
+					this.OnPassingYearNameChanging(value);
+					this.SendPropertyChanging();
+					this._PassingYearName = value;
+					this.SendPropertyChanged("PassingYearName");
+					this.OnPassingYearNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="TinyInt NOT NULL")]
+		public byte Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TshirtSize")]
+	public partial class TshirtSize : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _TshirtSizeId;
+		
+		private string _TshirtSizeName;
+		
+		private System.Nullable<byte> _Status;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTshirtSizeIdChanging(int value);
+    partial void OnTshirtSizeIdChanged();
+    partial void OnTshirtSizeNameChanging(string value);
+    partial void OnTshirtSizeNameChanged();
+    partial void OnStatusChanging(System.Nullable<byte> value);
+    partial void OnStatusChanged();
+    #endregion
+		
+		public TshirtSize()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TshirtSizeId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int TshirtSizeId
+		{
+			get
+			{
+				return this._TshirtSizeId;
+			}
+			set
+			{
+				if ((this._TshirtSizeId != value))
+				{
+					this.OnTshirtSizeIdChanging(value);
+					this.SendPropertyChanging();
+					this._TshirtSizeId = value;
+					this.SendPropertyChanged("TshirtSizeId");
+					this.OnTshirtSizeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TshirtSizeName", DbType="NVarChar(50)")]
+		public string TshirtSizeName
+		{
+			get
+			{
+				return this._TshirtSizeName;
+			}
+			set
+			{
+				if ((this._TshirtSizeName != value))
+				{
+					this.OnTshirtSizeNameChanging(value);
+					this.SendPropertyChanging();
+					this._TshirtSizeName = value;
+					this.SendPropertyChanged("TshirtSizeName");
+					this.OnTshirtSizeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="TinyInt")]
+		public System.Nullable<byte> Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[Transaction]")]
+	public partial class Transaction : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _TransactionId;
+		
+		private int _MemberRegId;
+		
+		private string _payerName;
+		
+		private string _payerEmail;
+		
+		private string _payerMobile;
+		
+		private string _clientTxnId;
+		
+		private string _payerAddress;
+		
+		private decimal _amount;
+		
+		private string _clientCode;
+		
+		private decimal _paidAmount;
+		
+		private string _paymentMode;
+		
+		private string _bankName;
+		
+		private string _amounttype;
+		
+		private string _Status;
+		
+		private long _statusCode;
+		
+		private string _challanNumber;
+		
+		private string _sabpaisaTxnld;
+		
+		private string _sabpaisaMessage;
+		
+		private string _bankMessage;
+		
+		private string _bankErrorCode;
+		
+		private string _sabpaisaErrorCode;
+		
+		private string _bankTxnld;
+		
+		private string _programId;
+		
+		private string _mcc;
+		
+		private System.DateTime _transDate;
+		
+		private string _rrn;
+		
+		private EntityRef<MemberReg> _MemberReg;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTransactionIdChanging(int value);
+    partial void OnTransactionIdChanged();
+    partial void OnMemberRegIdChanging(int value);
+    partial void OnMemberRegIdChanged();
+    partial void OnpayerNameChanging(string value);
+    partial void OnpayerNameChanged();
+    partial void OnpayerEmailChanging(string value);
+    partial void OnpayerEmailChanged();
+    partial void OnpayerMobileChanging(string value);
+    partial void OnpayerMobileChanged();
+    partial void OnclientTxnIdChanging(string value);
+    partial void OnclientTxnIdChanged();
+    partial void OnpayerAddressChanging(string value);
+    partial void OnpayerAddressChanged();
+    partial void OnamountChanging(decimal value);
+    partial void OnamountChanged();
+    partial void OnclientCodeChanging(string value);
+    partial void OnclientCodeChanged();
+    partial void OnpaidAmountChanging(decimal value);
+    partial void OnpaidAmountChanged();
+    partial void OnpaymentModeChanging(string value);
+    partial void OnpaymentModeChanged();
+    partial void OnbankNameChanging(string value);
+    partial void OnbankNameChanged();
+    partial void OnamounttypeChanging(string value);
+    partial void OnamounttypeChanged();
+    partial void OnStatusChanging(string value);
+    partial void OnStatusChanged();
+    partial void OnstatusCodeChanging(long value);
+    partial void OnstatusCodeChanged();
+    partial void OnchallanNumberChanging(string value);
+    partial void OnchallanNumberChanged();
+    partial void OnsabpaisaTxnldChanging(string value);
+    partial void OnsabpaisaTxnldChanged();
+    partial void OnsabpaisaMessageChanging(string value);
+    partial void OnsabpaisaMessageChanged();
+    partial void OnbankMessageChanging(string value);
+    partial void OnbankMessageChanged();
+    partial void OnbankErrorCodeChanging(string value);
+    partial void OnbankErrorCodeChanged();
+    partial void OnsabpaisaErrorCodeChanging(string value);
+    partial void OnsabpaisaErrorCodeChanged();
+    partial void OnbankTxnldChanging(string value);
+    partial void OnbankTxnldChanged();
+    partial void OnprogramIdChanging(string value);
+    partial void OnprogramIdChanged();
+    partial void OnmccChanging(string value);
+    partial void OnmccChanged();
+    partial void OntransDateChanging(System.DateTime value);
+    partial void OntransDateChanged();
+    partial void OnrrnChanging(string value);
+    partial void OnrrnChanged();
+    #endregion
+		
+		public Transaction()
+		{
+			this._MemberReg = default(EntityRef<MemberReg>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int TransactionId
+		{
+			get
+			{
+				return this._TransactionId;
+			}
+			set
+			{
+				if ((this._TransactionId != value))
+				{
+					this.OnTransactionIdChanging(value);
+					this.SendPropertyChanging();
+					this._TransactionId = value;
+					this.SendPropertyChanged("TransactionId");
+					this.OnTransactionIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MemberRegId", DbType="Int NOT NULL")]
+		public int MemberRegId
+		{
+			get
+			{
+				return this._MemberRegId;
+			}
+			set
+			{
+				if ((this._MemberRegId != value))
+				{
+					if (this._MemberReg.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMemberRegIdChanging(value);
+					this.SendPropertyChanging();
+					this._MemberRegId = value;
+					this.SendPropertyChanged("MemberRegId");
+					this.OnMemberRegIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_payerName", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
+		public string payerName
+		{
+			get
+			{
+				return this._payerName;
+			}
+			set
+			{
+				if ((this._payerName != value))
+				{
+					this.OnpayerNameChanging(value);
+					this.SendPropertyChanging();
+					this._payerName = value;
+					this.SendPropertyChanged("payerName");
+					this.OnpayerNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_payerEmail", DbType="NVarChar(350) NOT NULL", CanBeNull=false)]
+		public string payerEmail
+		{
+			get
+			{
+				return this._payerEmail;
+			}
+			set
+			{
+				if ((this._payerEmail != value))
+				{
+					this.OnpayerEmailChanging(value);
+					this.SendPropertyChanging();
+					this._payerEmail = value;
+					this.SendPropertyChanged("payerEmail");
+					this.OnpayerEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_payerMobile", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string payerMobile
+		{
+			get
+			{
+				return this._payerMobile;
+			}
+			set
+			{
+				if ((this._payerMobile != value))
+				{
+					this.OnpayerMobileChanging(value);
+					this.SendPropertyChanging();
+					this._payerMobile = value;
+					this.SendPropertyChanged("payerMobile");
+					this.OnpayerMobileChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clientTxnId", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string clientTxnId
+		{
+			get
+			{
+				return this._clientTxnId;
+			}
+			set
+			{
+				if ((this._clientTxnId != value))
+				{
+					this.OnclientTxnIdChanging(value);
+					this.SendPropertyChanging();
+					this._clientTxnId = value;
+					this.SendPropertyChanged("clientTxnId");
+					this.OnclientTxnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_payerAddress", DbType="NVarChar(100)")]
+		public string payerAddress
+		{
+			get
+			{
+				return this._payerAddress;
+			}
+			set
+			{
+				if ((this._payerAddress != value))
+				{
+					this.OnpayerAddressChanging(value);
+					this.SendPropertyChanging();
+					this._payerAddress = value;
+					this.SendPropertyChanged("payerAddress");
+					this.OnpayerAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Money NOT NULL")]
+		public decimal amount
+		{
+			get
+			{
+				return this._amount;
+			}
+			set
+			{
+				if ((this._amount != value))
+				{
+					this.OnamountChanging(value);
+					this.SendPropertyChanging();
+					this._amount = value;
+					this.SendPropertyChanged("amount");
+					this.OnamountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_clientCode", DbType="NVarChar(10) NOT NULL", CanBeNull=false)]
+		public string clientCode
+		{
+			get
+			{
+				return this._clientCode;
+			}
+			set
+			{
+				if ((this._clientCode != value))
+				{
+					this.OnclientCodeChanging(value);
+					this.SendPropertyChanging();
+					this._clientCode = value;
+					this.SendPropertyChanged("clientCode");
+					this.OnclientCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_paidAmount", DbType="Money NOT NULL")]
+		public decimal paidAmount
+		{
+			get
+			{
+				return this._paidAmount;
+			}
+			set
+			{
+				if ((this._paidAmount != value))
+				{
+					this.OnpaidAmountChanging(value);
+					this.SendPropertyChanging();
+					this._paidAmount = value;
+					this.SendPropertyChanged("paidAmount");
+					this.OnpaidAmountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_paymentMode", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string paymentMode
+		{
+			get
+			{
+				return this._paymentMode;
+			}
+			set
+			{
+				if ((this._paymentMode != value))
+				{
+					this.OnpaymentModeChanging(value);
+					this.SendPropertyChanging();
+					this._paymentMode = value;
+					this.SendPropertyChanged("paymentMode");
+					this.OnpaymentModeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bankName", DbType="NVarChar(355) NOT NULL", CanBeNull=false)]
+		public string bankName
+		{
+			get
+			{
+				return this._bankName;
+			}
+			set
+			{
+				if ((this._bankName != value))
+				{
+					this.OnbankNameChanging(value);
+					this.SendPropertyChanging();
+					this._bankName = value;
+					this.SendPropertyChanged("bankName");
+					this.OnbankNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amounttype", DbType="NVarChar(10)")]
+		public string amounttype
+		{
+			get
+			{
+				return this._amounttype;
+			}
+			set
+			{
+				if ((this._amounttype != value))
+				{
+					this.OnamounttypeChanging(value);
+					this.SendPropertyChanging();
+					this._amounttype = value;
+					this.SendPropertyChanged("amounttype");
+					this.OnamounttypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_statusCode", DbType="Int NOT NULL")]
+		public long statusCode
+		{
+			get
+			{
+				return this._statusCode;
+			}
+			set
+			{
+				if ((this._statusCode != value))
+				{
+					this.OnstatusCodeChanging(value);
+					this.SendPropertyChanging();
+					this._statusCode = value;
+					this.SendPropertyChanged("statusCode");
+					this.OnstatusCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_challanNumber", DbType="NVarChar(255)")]
+		public string challanNumber
+		{
+			get
+			{
+				return this._challanNumber;
+			}
+			set
+			{
+				if ((this._challanNumber != value))
+				{
+					this.OnchallanNumberChanging(value);
+					this.SendPropertyChanging();
+					this._challanNumber = value;
+					this.SendPropertyChanged("challanNumber");
+					this.OnchallanNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sabpaisaTxnld", DbType="NVarChar(30) NOT NULL", CanBeNull=false)]
+		public string sabpaisaTxnld
+		{
+			get
+			{
+				return this._sabpaisaTxnld;
+			}
+			set
+			{
+				if ((this._sabpaisaTxnld != value))
+				{
+					this.OnsabpaisaTxnldChanging(value);
+					this.SendPropertyChanging();
+					this._sabpaisaTxnld = value;
+					this.SendPropertyChanged("sabpaisaTxnld");
+					this.OnsabpaisaTxnldChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sabpaisaMessage", DbType="NVarChar(350) NOT NULL", CanBeNull=false)]
+		public string sabpaisaMessage
+		{
+			get
+			{
+				return this._sabpaisaMessage;
+			}
+			set
+			{
+				if ((this._sabpaisaMessage != value))
+				{
+					this.OnsabpaisaMessageChanging(value);
+					this.SendPropertyChanging();
+					this._sabpaisaMessage = value;
+					this.SendPropertyChanged("sabpaisaMessage");
+					this.OnsabpaisaMessageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bankMessage", DbType="NVarChar(255)")]
+		public string bankMessage
+		{
+			get
+			{
+				return this._bankMessage;
+			}
+			set
+			{
+				if ((this._bankMessage != value))
+				{
+					this.OnbankMessageChanging(value);
+					this.SendPropertyChanging();
+					this._bankMessage = value;
+					this.SendPropertyChanged("bankMessage");
+					this.OnbankMessageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bankErrorCode", DbType="NVarChar(350) NOT NULL", CanBeNull=false)]
+		public string bankErrorCode
+		{
+			get
+			{
+				return this._bankErrorCode;
+			}
+			set
+			{
+				if ((this._bankErrorCode != value))
+				{
+					this.OnbankErrorCodeChanging(value);
+					this.SendPropertyChanging();
+					this._bankErrorCode = value;
+					this.SendPropertyChanged("bankErrorCode");
+					this.OnbankErrorCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sabpaisaErrorCode", DbType="NVarChar(350)")]
+		public string sabpaisaErrorCode
+		{
+			get
+			{
+				return this._sabpaisaErrorCode;
+			}
+			set
+			{
+				if ((this._sabpaisaErrorCode != value))
+				{
+					this.OnsabpaisaErrorCodeChanging(value);
+					this.SendPropertyChanging();
+					this._sabpaisaErrorCode = value;
+					this.SendPropertyChanged("sabpaisaErrorCode");
+					this.OnsabpaisaErrorCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bankTxnld", DbType="NVarChar(350)")]
+		public string bankTxnld
+		{
+			get
+			{
+				return this._bankTxnld;
+			}
+			set
+			{
+				if ((this._bankTxnld != value))
+				{
+					this.OnbankTxnldChanging(value);
+					this.SendPropertyChanging();
+					this._bankTxnld = value;
+					this.SendPropertyChanged("bankTxnld");
+					this.OnbankTxnldChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_programId", DbType="NVarChar(355)")]
+		public string programId
+		{
+			get
+			{
+				return this._programId;
+			}
+			set
+			{
+				if ((this._programId != value))
+				{
+					this.OnprogramIdChanging(value);
+					this.SendPropertyChanging();
+					this._programId = value;
+					this.SendPropertyChanged("programId");
+					this.OnprogramIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mcc", DbType="NVarChar(50)")]
+		public string mcc
+		{
+			get
+			{
+				return this._mcc;
+			}
+			set
+			{
+				if ((this._mcc != value))
+				{
+					this.OnmccChanging(value);
+					this.SendPropertyChanging();
+					this._mcc = value;
+					this.SendPropertyChanged("mcc");
+					this.OnmccChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_transDate", DbType="DateTime NOT NULL")]
+		public System.DateTime transDate
+		{
+			get
+			{
+				return this._transDate;
+			}
+			set
+			{
+				if ((this._transDate != value))
+				{
+					this.OntransDateChanging(value);
+					this.SendPropertyChanging();
+					this._transDate = value;
+					this.SendPropertyChanged("transDate");
+					this.OntransDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rrn", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string rrn
+		{
+			get
+			{
+				return this._rrn;
+			}
+			set
+			{
+				if ((this._rrn != value))
+				{
+					this.OnrrnChanging(value);
+					this.SendPropertyChanging();
+					this._rrn = value;
+					this.SendPropertyChanged("rrn");
+					this.OnrrnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MemberReg_Transaction", Storage="_MemberReg", ThisKey="MemberRegId", OtherKey="MemberRegId", IsForeignKey=true)]
+		public MemberReg MemberReg
+		{
+			get
+			{
+				return this._MemberReg.Entity;
+			}
+			set
+			{
+				MemberReg previousValue = this._MemberReg.Entity;
+				if (((previousValue != value) 
+							|| (this._MemberReg.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MemberReg.Entity = null;
+						previousValue.Transactions.Remove(this);
+					}
+					this._MemberReg.Entity = value;
+					if ((value != null))
+					{
+						value.Transactions.Add(this);
+						this._MemberRegId = value.MemberRegId;
+					}
+					else
+					{
+						this._MemberRegId = default(int);
+					}
+					this.SendPropertyChanged("MemberReg");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -99,8 +1055,6 @@ namespace Boxa
 		
 		private string _Name;
 		
-		private System.DateTime _DateofBirth;
-		
 		private decimal _Amount;
 		
 		private EntityRef<MemberReg> _MemberReg;
@@ -117,8 +1071,6 @@ namespace Boxa
     partial void OnRelationTypeChanged();
     partial void OnNameChanging(string value);
     partial void OnNameChanged();
-    partial void OnDateofBirthChanging(System.DateTime value);
-    partial void OnDateofBirthChanged();
     partial void OnAmountChanging(decimal value);
     partial void OnAmountChanged();
     #endregion
@@ -209,26 +1161,6 @@ namespace Boxa
 					this._Name = value;
 					this.SendPropertyChanged("Name");
 					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateofBirth", DbType="Date NOT NULL")]
-		public System.DateTime DateofBirth
-		{
-			get
-			{
-				return this._DateofBirth;
-			}
-			set
-			{
-				if ((this._DateofBirth != value))
-				{
-					this.OnDateofBirthChanging(value);
-					this.SendPropertyChanging();
-					this._DateofBirth = value;
-					this.SendPropertyChanged("DateofBirth");
-					this.OnDateofBirthChanged();
 				}
 			}
 		}
@@ -340,7 +1272,17 @@ namespace Boxa
 		
 		private byte _TshirtSize;
 		
-		private System.Nullable<decimal> _TotalAmountPaid;
+		private decimal _TotalAmountPaid;
+		
+		private string _Photo;
+		
+		private System.DateTime _RegistrationDate;
+		
+		private string _PaymentStatus;
+		
+		private string _ClientTxnId;
+		
+		private EntitySet<Transaction> _Transactions;
 		
 		private EntitySet<MemberDetail> _MemberDetails;
 		
@@ -374,12 +1316,21 @@ namespace Boxa
     partial void OnOrganizationNameChanged();
     partial void OnTshirtSizeChanging(byte value);
     partial void OnTshirtSizeChanged();
-    partial void OnTotalAmountPaidChanging(System.Nullable<decimal> value);
+    partial void OnTotalAmountPaidChanging(decimal value);
     partial void OnTotalAmountPaidChanged();
+    partial void OnPhotoChanging(string value);
+    partial void OnPhotoChanged();
+    partial void OnRegistrationDateChanging(System.DateTime value);
+    partial void OnRegistrationDateChanged();
+    partial void OnPaymentStatusChanging(string value);
+    partial void OnPaymentStatusChanged();
+    partial void OnClientTxnIdChanging(string value);
+    partial void OnClientTxnIdChanged();
     #endregion
 		
 		public MemberReg()
 		{
+			this._Transactions = new EntitySet<Transaction>(new Action<Transaction>(this.attach_Transactions), new Action<Transaction>(this.detach_Transactions));
 			this._MemberDetails = new EntitySet<MemberDetail>(new Action<MemberDetail>(this.attach_MemberDetails), new Action<MemberDetail>(this.detach_MemberDetails));
 			OnCreated();
 		}
@@ -464,7 +1415,7 @@ namespace Boxa
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(350)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(350) NOT NULL", CanBeNull=false)]
 		public string Email
 		{
 			get
@@ -644,8 +1595,8 @@ namespace Boxa
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalAmountPaid", DbType="Money")]
-		public System.Nullable<decimal> TotalAmountPaid
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalAmountPaid", DbType="Money NOT NULL")]
+		public decimal TotalAmountPaid
 		{
 			get
 			{
@@ -661,6 +1612,99 @@ namespace Boxa
 					this.SendPropertyChanged("TotalAmountPaid");
 					this.OnTotalAmountPaidChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Photo", DbType="NVarChar(150)")]
+		public string Photo
+		{
+			get
+			{
+				return this._Photo;
+			}
+			set
+			{
+				if ((this._Photo != value))
+				{
+					this.OnPhotoChanging(value);
+					this.SendPropertyChanging();
+					this._Photo = value;
+					this.SendPropertyChanged("Photo");
+					this.OnPhotoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RegistrationDate", DbType="DateTime NOT NULL")]
+		public System.DateTime RegistrationDate
+		{
+			get
+			{
+				return this._RegistrationDate;
+			}
+			set
+			{
+				if ((this._RegistrationDate != value))
+				{
+					this.OnRegistrationDateChanging(value);
+					this.SendPropertyChanging();
+					this._RegistrationDate = value;
+					this.SendPropertyChanged("RegistrationDate");
+					this.OnRegistrationDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentStatus", DbType="NVarChar(20)")]
+		public string PaymentStatus
+		{
+			get
+			{
+				return this._PaymentStatus;
+			}
+			set
+			{
+				if ((this._PaymentStatus != value))
+				{
+					this.OnPaymentStatusChanging(value);
+					this.SendPropertyChanging();
+					this._PaymentStatus = value;
+					this.SendPropertyChanged("PaymentStatus");
+					this.OnPaymentStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientTxnId", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string ClientTxnId
+		{
+			get
+			{
+				return this._ClientTxnId;
+			}
+			set
+			{
+				if ((this._ClientTxnId != value))
+				{
+					this.OnClientTxnIdChanging(value);
+					this.SendPropertyChanging();
+					this._ClientTxnId = value;
+					this.SendPropertyChanged("ClientTxnId");
+					this.OnClientTxnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MemberReg_Transaction", Storage="_Transactions", ThisKey="MemberRegId", OtherKey="MemberRegId")]
+		public EntitySet<Transaction> Transactions
+		{
+			get
+			{
+				return this._Transactions;
+			}
+			set
+			{
+				this._Transactions.Assign(value);
 			}
 		}
 		
@@ -695,6 +1739,18 @@ namespace Boxa
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Transactions(Transaction entity)
+		{
+			this.SendPropertyChanging();
+			entity.MemberReg = this;
+		}
+		
+		private void detach_Transactions(Transaction entity)
+		{
+			this.SendPropertyChanging();
+			entity.MemberReg = null;
 		}
 		
 		private void attach_MemberDetails(MemberDetail entity)

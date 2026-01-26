@@ -23,6 +23,7 @@ namespace BoxaRegistration
             routeCollection.MapPageRoute("", "terms-conditions", "~/terms-conditions.aspx");
             routeCollection.MapPageRoute("", "privacy-policy", "~/privacy-policy.aspx");
             routeCollection.MapPageRoute("", "refund-policy", "~/refund-policy.aspx");
+            routeCollection.MapPageRoute("", "payment-response", "~/payment-response.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)

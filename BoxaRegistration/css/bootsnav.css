@@ -2226,8 +2226,10 @@ ul.cart-list > li.total > .btn {
 @media (min-width: 1024px) {
 
     nav.navbar ul.nav > li > a {
-        padding: 30px 15px;
-        font-weight: 300;
+        padding: 10px 15px;
+        font-weight: 600;
+        color: #002147;
+        margin-top: 20px;
     }
 
     nav.navbar .navbar-brand {

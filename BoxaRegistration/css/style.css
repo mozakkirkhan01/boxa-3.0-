@@ -625,7 +625,7 @@ input {
 .btn-theme,
 .button-theme {
     background-color: #ffb606;
-    color: #002147 !important;
+    color: #fff !important;
     border: 2px solid #ffb606;
 }
 
@@ -1934,8 +1934,6 @@ to {
 .our-featues-area .about-info .thumb {
     padding-right: 0;
 }
-
-
 /* Nice Select CSS */
 .nice-select {
     -webkit-tap-highlight-color: transparent;
@@ -1945,7 +1943,7 @@ to {
     clear: both;
     cursor: pointer;
     display: block;
-    float: left;
+    float: none!important;
     font-family: inherit;
     font-size: 14px;
     font-weight: normal;
@@ -1962,9 +1960,9 @@ to {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    white-space: nowrap;
+   /* white-space: nowrap;*/
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     z-index: 1;
 }
 
@@ -2061,7 +2059,7 @@ to {
         }
 
     .nice-select .list {
-        background-color: #fff;
+        background-color: antiquewhite;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
@@ -2086,7 +2084,7 @@ to {
         transform: scale(0.75) translateY(-21px);
         -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
         transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
-        z-index: 9;
+        z-index: 999;
         width: 100%;
     }
 
@@ -2123,7 +2121,28 @@ to {
             color: #999;
             cursor: default;
         }
+.form-group .nice-select .list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
 
+/* Fix footer gap */
+.form-card,
+.row,
+.col-md-6 {
+    min-height: auto !important;
+}
+
+/* Validation message spacing */
+.field-error {
+    min-height: 18px;
+    margin-top: 4px;
+    font-size: 12px;
+}
 .no-csspointerevents .nice-select .list {
     display: none;
 }

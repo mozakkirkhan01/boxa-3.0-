@@ -80,13 +80,51 @@
             }
         }
     </style>
+    <style>
+        /* Extra buttons container */
+        .nav-extra-btns {
+            margin-left: 0px;
+        }
 
+            /* Base button style */
+            .nav-extra-btns li a.extra-btn {
+                color: #fff !important;
+                padding: 9px 18px;
+                margin: 5px;
+                border-radius: 25px;
+                font-weight: 600;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+                display: inline-block;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            }
+
+        /* Individual button colors */
+        .extra-btn.btn-home {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+        }
+
+        .extra-btn.btn-receipt {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+        }
+
+        .extra-btn.btn-contact {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        }
+
+        /* Hover animation */
+        .nav-extra-btns li a.extra-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            opacity: 0.95;
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="top-bar-area address-one-lines bg-dark text-light">
+        <div class="top-bar-area address-one-lines bg-dark text-light">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 address-info">
@@ -113,16 +151,13 @@
                 </div>
             </div>
         </div>
-        
+
         <header>
-            <!-- Start Navigation -->
             <nav class="navbar mobile-sidenav inc-shape navbar-sticky navbar-default validnavs dark">
 
                 <div class="container d-flex justify-content-between align-items-center">
 
-
                     <div class="navbar-brand-left">
-                        <!-- Start Header Navigation -->
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                                 <i class="fa fa-bars"></i>
@@ -131,44 +166,49 @@
                                 <img src="/images/boxa-logo-new1.png" class="logo" alt="Logo">
                             </a>
                         </div>
-                        <!-- End Header Navigation -->
                     </div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
 
-                        <%-- <img src="assets/img/logo.png" alt="Logo">--%>
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-times"></i>
-                        </button>
-
-                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li >
-                                <a href="/home" class=" active smooth-menu" >Home</a>
+                        <ul class="nav navbar-nav navbar-right nav-extra-btns" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li>
+                                <a href="/home" class=" active smooth-menu extra-btn btn-home">Home</a>
                             </li>
                             <li>
-                                <a class="smooth-menu" href="#">Download e-Receipt</a>
+                                <a class="smooth-menu extra-btn btn-receipt" href="#">Download e-Receipt</a>
                             </li>
 
                             <li>
-                                <a class="smooth-menu" href="#">contact</a>
+                                <a class="smooth-menu extra-btn btn-contact" href="#">contact</a>
                             </li>
                         </ul>
+
                     </div>
-                    <!-- /.navbar-collapse -->
 
-                    <!-- Main Nav -->
+
+
                 </div>
-                <!-- Overlay screen for menu -->
                 <div class="overlay-screen"></div>
-                <!-- End Overlay screen for menu -->
-
             </nav>
-            <!-- End Navigation -->
+
         </header>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-         <footer class="bg-light">
+        <%-- <div class="container">
+                <!-- End Navigation -->
+                <ul class="nav navbar-nav navbar-right nav-extra-btns">
+                    <li>
+                        <a href="/home" class="extra-btn btn-home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="extra-btn btn-receipt">Download e-Receipt</a>
+                    </li>
+                    <li>
+                        <a href="#" class="extra-btn btn-contact">Contact</a>
+                    </li>
+                </ul>
+            </div>--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer class="bg-light">
             <!-- Start Footer Bottom -->
             <div class="footer-bottom">
                 <div class="container">

@@ -1,24 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BoxaDiamondReg">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.875, 12.375" name="BoxaDiamondReg">
   <DataContextMoniker Name="/BoxaDiamondRegDataContext" />
   <nestedChildShapes>
-    <classShape Id="0b0ea8d8-63b3-4e04-a0aa-f02d9e9b3dea" absoluteBounds="3.5, 1.75, 2, 1.9631982421875003">
+    <classShape Id="3b482457-0694-4db3-b0a8-f8f5373e8a2f" absoluteBounds="3.375, 4.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/BoxaDiamondRegDataContext/PassingYear" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4680502b-9814-4cc4-a566-99e718386dce" absoluteBounds="3.39, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f10496be-0855-491a-bc41-a7bcf4072295" absoluteBounds="5.75, 4.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/BoxaDiamondRegDataContext/TshirtSize" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6cd99437-13b2-44a4-927c-2c67530a5a88" absoluteBounds="5.765, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a57fa69-2c6a-4a62-8edd-277cbce4c25f" absoluteBounds="8.25, 6.375, 2, 5.8092268880208318">
+      <DataClassMoniker Name="/BoxaDiamondRegDataContext/Transaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d86369d-188b-4d3d-8cfa-7b4e16dc0661" absoluteBounds="8.265, 6.835, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="622ed413-099c-473d-b223-fb15a3d09f5f" absoluteBounds="8.75, 2.75, 2, 1.7708968098958331">
       <DataClassMoniker Name="/BoxaDiamondRegDataContext/MemberDetail" />
       <nestedChildShapes>
-        <elementListCompartment Id="832681c9-e77f-4c50-87d6-32af30f765f7" absoluteBounds="3.515, 2.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ccb7bac0-25de-43f6-b090-ea45f838e131" absoluteBounds="8.765, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="c171690f-b71d-4c9d-81dc-63523ef4600c" absoluteBounds="0.75, 1, 2, 3.5016097005208326">
+    <classShape Id="1ec21e79-dbe5-49a8-b766-5551523aa4eb" absoluteBounds="11.625, 4.375, 2, 4.2708154296875">
       <DataClassMoniker Name="/BoxaDiamondRegDataContext/MemberReg" />
       <nestedChildShapes>
-        <elementListCompartment Id="1946f328-4757-4082-9858-5bbf9e6229be" absoluteBounds="0.765, 1.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d3cb00a4-6d62-4890-b8de-38339a8e7797" absoluteBounds="11.64, 4.835, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 2.73159912109375); (3.5 : 2.73159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(11.625 : 7.51040771484375); (10.25 : 7.51040771484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BoxaDiamondRegDataContext/MemberReg/MemberReg_Transaction" />
+      <nodes>
+        <classShapeMoniker Id="1ec21e79-dbe5-49a8-b766-5551523aa4eb" />
+        <classShapeMoniker Id="0a57fa69-2c6a-4a62-8edd-277cbce4c25f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.625 : 5.41669890494792); (10.53125 : 5.41669890494792); (10.53125 : 4.52089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BoxaDiamondRegDataContext/MemberReg/MemberReg_MemberDetail" />
       <nodes>
-        <classShapeMoniker Id="c171690f-b71d-4c9d-81dc-63523ef4600c" />
-        <classShapeMoniker Id="0b0ea8d8-63b3-4e04-a0aa-f02d9e9b3dea" />
+        <classShapeMoniker Id="1ec21e79-dbe5-49a8-b766-5551523aa4eb" />
+        <classShapeMoniker Id="622ed413-099c-473d-b223-fb15a3d09f5f" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

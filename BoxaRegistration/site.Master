@@ -81,6 +81,7 @@
         }
     </style>
     <style>
+
         /* Extra buttons container */
         .nav-extra-btns {
             margin-left: 0px;

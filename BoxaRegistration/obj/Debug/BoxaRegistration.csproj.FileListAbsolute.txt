@@ -82,17 +82,20 @@ E:\Krishna File\Project 2026\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaReg
 E:\Krishna File\Project 2026\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.CopyComplete
 E:\Krishna File\Project 2026\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.dll
 E:\Krishna File\Project 2026\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.pdb
-D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.AssemblyReference.cache
-D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.CoreCompileInputs.cache
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.dll.config
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.dll
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\BoxaRegistration.pdb
-D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\Boxa.dll
-D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\Newtonsoft.Json.dll
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\BouncyCastle.Crypto.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\Boxa.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\itextsharp.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\itextsharp.xmlworker.dll
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\Newtonsoft.Json.dll
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\Boxa.pdb
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\Boxa.dll.config
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\itextsharp.xml
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\bin\Newtonsoft.Json.xml
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.AssemblyReference.cache
+D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.CoreCompileInputs.cache
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.csproj.CopyComplete
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.dll
 D:\mozakkir\webaikon\Projects\asp.net2.0\BoxaRegistration (4)\BoxaRegistration\BoxaRegistration\obj\Debug\BoxaRegistration.pdb

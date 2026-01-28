@@ -13,6 +13,8 @@ namespace BoxaRegistration
 {
     public partial class _default : System.Web.UI.Page
     {
+
+
         Encryption enc = new Encryption();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,8 +25,8 @@ namespace BoxaRegistration
                 LoadData.LoadPassingYear(ddlYearPassing, true, "Select Year");
                 LoadData.LoadTshirtSize(ddlTshirtSize, true, "Select T-shirt Size");
                 txtTotalAmount.Text = "3";
-                RestoreMemberTable();
             }
+                RestoreMemberTable();
 
         }
         public class MemberRegModel
@@ -218,70 +220,51 @@ namespace BoxaRegistration
         }
         protected void btnUpload_Click(object sender, EventArgs e)
         {
-            lblMsg.Text = "";
-            try
+            lblPHotoMsg.Text = "";
+            imgPhotoSuccessError.ImageUrl = "";
+
+            // 1️⃣ Check if file selected
+            if (!fuMemberPhoto.HasFile)
             {
-                if (fuMemberPhoto.HasFile)
-                {
-                    if (fuMemberPhoto.PostedFile.ContentLength <= 512000)
-                    {
-                        string extension = System.IO.Path.GetExtension(fuMemberPhoto.FileName);
-                        if (extension.ToLower() == ".jpg" || extension.ToLower() == ".jpeg")
-                        {
-
-                            byte[] fileData = null;
-
-                            System.Drawing.Bitmap objbitmap = new System.Drawing.Bitmap(fuMemberPhoto.PostedFile.InputStream);
-                            int height = objbitmap.Height;
-                            int width = objbitmap.Width;
-                            fileData = ImageToByte(objbitmap);
-
-                            System.IO.Stream stream = fuMemberPhoto.PostedFile.InputStream;
-                            BinaryReader binaryReader = new BinaryReader(stream);
-                            Byte[] bytes = binaryReader.ReadBytes((int)stream.Length);
-
-                            //   Session["imgString"] = ufPhoto.FileBytes;
-
-
-                            string base64String = Convert.ToBase64String(fileData, 0, fileData.Length);
-                            imgPhoto.ImageUrl = "data:image/png;base64," + base64String;
-                            Session["imgString"] = base64String;
-                            lblMsg.ForeColor = System.Drawing.Color.Green;
-
-                            imgPhotoSuccessError.ImageUrl = "~/images/success.png";
-                            lblPHotoMsg.Text = "Photo Uploaded Successfully!";
-                            lblPHotoMsg.ForeColor = System.Drawing.Color.Green;
-
-                            Session["Photo"] = "data:image/png;base64," + base64String;
-                        }
-                        else
-                        {
-                            imgPhoto.ImageUrl = "~/images/noimage.png";
-                            lblPHotoMsg.Text = "Invalid Image Format";
-                            lblPHotoMsg.ForeColor = System.Drawing.Color.Red;
-                            imgPhotoSuccessError.ImageUrl = "~/images/close.png";
-                            Session["Photo"] = null;
-                        }
-                    }
-                    else
-                    {
-                        imgPhoto.ImageUrl = "~/images/noimage.png";
-                        lblPHotoMsg.Text = "Photo size should be less than 500 KB";
-                        lblPHotoMsg.ForeColor = System.Drawing.Color.Red;
-                        imgPhotoSuccessError.ImageUrl = "~/images/close.png";
-                        Session["Photo"] = null;
-                        throw new Exception("");
-                    }
-                }
+                lblPHotoMsg.Text = "Please select an image first.";
+                lblPHotoMsg.ForeColor = System.Drawing.Color.Red;
+                imgPhotoSuccessError.ImageUrl = "~/images/error.png";
+                return;
             }
-            catch (Exception ex)
+
+            // 2️⃣ Check file size (50 KB = 51200 bytes)
+            if (fuMemberPhoto.PostedFile.ContentLength > 51200)
             {
-                imgPhoto.ImageUrl = "~/images/noimage.png";
-                lblMsg.Text = ex.Message;
-                lblMsg.ForeColor = System.Drawing.Color.Red;
-                Session["Photo"] = null;
+                lblPHotoMsg.Text = "Image size must be 50 KB or less.";
+                lblPHotoMsg.ForeColor = System.Drawing.Color.Red;
+                imgPhotoSuccessError.ImageUrl = "~/images/error.png";
+                return;
             }
+
+            // 3️⃣ Check file extension
+            string extension = Path.GetExtension(fuMemberPhoto.FileName).ToLower();
+            if (extension != ".jpg" && extension != ".jpeg" && extension != ".png")
+            {
+                lblPHotoMsg.Text = "Only JPG, JPEG or PNG images allowed.";
+                lblPHotoMsg.ForeColor = System.Drawing.Color.Red;
+                imgPhotoSuccessError.ImageUrl = "~/images/error.png";
+                return;
+            }
+
+            // 4️⃣ Upload image
+            byte[] imageBytes = fuMemberPhoto.FileBytes;
+            string base64 = Convert.ToBase64String(imageBytes);
+
+            imgPhoto.ImageUrl = "data:image/png;base64," + base64;
+
+            Session["Photo"] = base64;
+
+            lblPHotoMsg.Text = "Photo uploaded successfully!";
+            lblPHotoMsg.ForeColor = System.Drawing.Color.Green;
+            imgPhotoSuccessError.ImageUrl = "~/images/success.png";
         }
+
+
 
         protected void ddlRelation_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -363,13 +346,16 @@ namespace BoxaRegistration
                 tr.Cells.Add(new TableCell { Text = m.Name });
                 tr.Cells.Add(new TableCell { Text = m.Amount.ToString() });
 
-                Button btnRemove = new Button
-                {
-                    Text = "Remove",
-                    CssClass = "btn btn-sm btn-danger",
-                    CommandArgument = i.ToString()
-                };
+                Button btnRemove = new Button();
+                btnRemove.ID = "btnRemove_" + i;   // 🔥 THIS LINE FIXES EVERYTHING
+                btnRemove.Text = "Remove";
+                btnRemove.CssClass = "btn btn-sm btn-danger";
+                btnRemove.CommandArgument = i.ToString();
+                btnRemove.CausesValidation = false;
+                btnRemove.UseSubmitBehavior = false;
                 btnRemove.Click += BtnRemove_Click;
+
+
 
                 TableCell actionCell = new TableCell();
                 actionCell.Controls.Add(btnRemove);
@@ -384,23 +370,27 @@ namespace BoxaRegistration
             Button btn = (Button)sender;
             int index = Convert.ToInt32(btn.CommandArgument);
 
-            List<MemberDetailModel> members = string.IsNullOrEmpty(hfMemberData.Value)
+            // Get list
+            List<MemberDetailModel> members =
+                string.IsNullOrEmpty(hfMemberData.Value)
                 ? new List<MemberDetailModel>()
-                : Newtonsoft.Json.JsonConvert.DeserializeObject<List<MemberDetailModel>>(hfMemberData.Value);
+                : JsonConvert.DeserializeObject<List<MemberDetailModel>>(hfMemberData.Value);
 
+            // REMOVE FROM LIST
             if (index >= 0 && index < members.Count)
                 members.RemoveAt(index);
 
-            // Update hidden field
-            hfMemberData.Value = Newtonsoft.Json.JsonConvert.SerializeObject(members);
+            // UPDATE hidden field (MOST IMPORTANT)
+            hfMemberData.Value = JsonConvert.SerializeObject(members);
 
             // Recalculate total
             decimal baseAmount = 3;
-            decimal totalAmount = baseAmount + members.Sum(m => m.Amount);
-            txtTotalAmount.Text = totalAmount.ToString();
+            txtTotalAmount.Text = (baseAmount + members.Sum(m => m.Amount)).ToString();
 
+            // Re-render table
             RenderMemberTable(members);
         }
+
         private void RestoreMemberTable()
         {
             List<MemberDetailModel> members = string.IsNullOrEmpty(hfMemberData.Value)

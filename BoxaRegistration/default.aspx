@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="BoxaRegistration._default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="BoxaRegistration._default" MaintainScrollPositionOnPostBack="true"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="/css/default.css" rel="stylesheet" />
@@ -224,6 +224,7 @@
                                             runat="server"
                                             CssClass="btn btn-success"
                                             Text="Upload Photo"
+                                            UseSubmitBehavior="false"
                                             OnClick="btnUpload_Click" />
                                     </div>
 
@@ -236,7 +237,8 @@
                             <%-- Add Member --%>
                             <!-- ADD MEMBER BUTTON -->
                             <div class="col-md-12 text-left mt-2">
-                                <button type="button" class="btn btn-theme effect btn-md" onclick="showMemberForm()">
+                                <button type="button" class="btn btn-theme effect btn-md" UseSubmitBehavior="false"
+                                 onclick="showMemberForm()">
                                     + Add Spouse / Children
                                 </button>
                             </div>

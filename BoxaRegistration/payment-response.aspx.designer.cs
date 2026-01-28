@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BoxaRegistration {
-    
-    
-    public partial class payment_response {
-        
+namespace BoxaRegistration
+{
+
+
+    public partial class payment_response
+    {
+
         /// <summary>
         /// lblStatus control.
         /// </summary>

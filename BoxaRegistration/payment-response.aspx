@@ -16,6 +16,14 @@
         <p><b>Transaction ID:</b> <%= payment.ClientTxnId %></p>
         <p><b>Amount Paid:</b> ₹<%= payment.PaidAmount %></p>
         <p><b>Status:</b> SUCCESS</p>
+                <!-- ✅ ADD BUTTON HERE -->
+<a href="payment-response.aspx?download=1"
+   target="_blank"
+   class="btn btn-warning">
+   DOWNLOAD E-RECEIPT
+</a>
+
+
         <hr />
         <p class="text-muted">Thank you for registering for BOXA Diamond Jubilee Celebration.</p>
     </div>
